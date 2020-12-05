@@ -19,10 +19,11 @@ public class LogicTest {
 
     @Ignore
     @Test(expected = OccupiedCellException.class)
-    public void moveOccupiedCellException() {
+    public void moveOccupiedCellException() throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.C1));
         logic.add(new BishopBlack(Cell.B2));
-        //logic.move(Cell.C1, Cell.A3);
+        logic.move(Cell.C1, Cell.A3);
     }
+    
 }
